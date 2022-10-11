@@ -15,8 +15,10 @@ if __name__ == '__main__':
     num_of_students = int(input('How many students? '))
     group_size = int(input('Required group size? '))
 
-    print('There will be', num_of_students // group_size,
-          ' groups with', num_of_students % group_size, 'students left over.\n')
+    full_groups = num_of_students // group_size
+    left_over = num_of_students % group_size
+
+    print(f'There will be {full_groups} group{"s" if full_groups > 1 else ""} with {left_over} student {"s" if left_over > 1 else ""}left over.\n')
 
     print('*********** Task 4 ***********')
     num_of_sweets = int(input('Enter number of sweets: '))
