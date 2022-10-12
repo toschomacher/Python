@@ -104,12 +104,13 @@ if __name__ == '__main__':
     # Task 8
     print('\n*********** Task 8 ***********')
     print('\tChoose A Time Table:')
-    
+    invert = 1
     while True:
         multiplicand = int(input('Choose a multiplicand from -12 to +12: '))
         if 0 <= multiplicand < 13:
             break
         elif -13 < multiplicand < 0:
+            invert = invert * -1
             break
         else:
             print('Error: Invalid number.\nEnter a number between -12 and 12 inclusive.')
@@ -122,13 +123,13 @@ if __name__ == '__main__':
     finish_range = 13
     count = 1
     
-    if multiplicand <0:
+    if multiplicand < 0:
         multiplicand *=-1
         start_range = -12
         finish_range = 1
     
     for mult in range(start_range,finish_range):
-        mult = mult * -1
+        mult = mult * invert
         print(f'|{count:2}', f'\t|  {multiplicand:2}', '  x', f'  {mult:2}', '  =  ', f'{mult*multiplicand:3}', '  |')
         count +=1
     
