@@ -13,7 +13,7 @@ if __name__ == '__main__':
     # Task 2
     print('\n*********** Task 2 ***********')
     password = input('Please enter a new password: ')
-    password_verify = input('Please enter the password again:')
+    password_verify = input('Please re-enter the password:')
     if password == password_verify:
         print("Password Set")
     else:
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print('\n*********** Task 3 ***********')
     password = input('Please enter a new password between 8 and 12 characters: ')
     if 7 < len(password) < 13:
-        password_verify = input('Please enter the password again:')
+        password_verify = input('Please re-enter the password:')
         if password == password_verify:
             print("Password Set")
         else:
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     password = input('Please enter a new password between 8 and 12 characters: ')
     if 7 < len(password) < 13:
         if password not in BAD_PASSWORDS:
-            password_verify = input('Please enter the password again:')
+            password_verify = input('Please re-enter the password:')
             if password == password_verify:
                 print("Password Set")
             else:
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         password = input('Please enter a new password between 8 and 12 characters: ')
         if 7 < len(password) < 13:
             if password not in BAD_PASSWORDS:
-                password_verify = input('Please enter the password again:')
+                password_verify = input('Please re-enter the password:')
                 if password == password_verify:
                     print("Password Set")
                     break
@@ -67,4 +67,19 @@ if __name__ == '__main__':
             print("Error: Password must be between 8 and 12 characters.")
     # Task 6
     print('\n*********** Task 6 ***********')
+    print('\tSeven Time Table:')
+    print(' _______________________________________')
+    print('|Opera- | Multi-|  Multi- | Result      |')
+    print('|tion # |plicand|  plier  | Product     |')
+    print('|_______|_______|_________|_____________|')
+    
+    number = 0
+    multiplicand = 7
+    
+    for mult in range(12):
+        number += 1
+        mult += 1
+        print('|', number, f'\t|  {multiplicand}', '   x', f'  {number}', '\t  | ', mult*multiplicand, ' \t|')
+    print('|_______|_______|_________|_____________|')
     print()
+    
