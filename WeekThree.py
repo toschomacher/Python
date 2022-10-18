@@ -97,34 +97,31 @@ if __name__ == '__main__':
     
     print('\n*********** Task 8 ***********')
     print('\tChoose A Time Table:')
-    invert = 1
+
     while True:
-        multiplicand = int(input('Choose a multiplicand from -12 to +12: '))
-        if 0 <= multiplicand < 13:
-            break
-        elif -13 < multiplicand < 0:
-            invert = invert * -1
-            break
-        else:
-            print('Error: Invalid number.\nEnter a number between -12 and 12 inclusive.')
-    print(' ___________________________________')
-    print('|Opera- | Multi-| Multi- | Result/ |')
-    print('|tion # |plicand| plier  | Product |')
-    print('|_______|_______|________|_________|')
-    
+        try:
+            multiplicand = int(input('Choose a multiplicand from -12 to +12: '))
+            if -13 < multiplicand < 13:
+                break
+            else:
+                print('Error: Invalid number.\nEnter a number between -12 and 12 inclusive.')
+        except ValueError:
+            print("Please enter an integer to proceed.")
+
+    print(' ___________________________')
+    print('| Multi-| Multi- | Result/ |')
+    print('|plicand| plier  | Product |')
+    print('|_______|________|_________|')
+
     start_range = 0
     finish_range = 13
-    count = 1
-    
+
     if multiplicand < 0:
-        multiplicand *=-1
         start_range = -12
         finish_range = 1
-    
-    for mult in range(start_range,finish_range):
-        mult = mult * invert
-        print(f'|{count:2}', f'\t|  {multiplicand:2}', '  x', f'  {mult:2}', '  =  ', f'{mult*multiplicand:3}', '  |')
-        count +=1
-    
-    print('|_______|_______|________|_________|')
-    
+
+    for mult in range(start_range, finish_range):
+        print(f'|  {abs(multiplicand):2}', '  x', f'  {abs(mult):2}', '  =  ', f'{abs(mult) * abs(multiplicand):3}',
+              '  |')
+
+    print('|_______|________|_________|')
