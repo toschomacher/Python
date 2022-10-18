@@ -79,3 +79,18 @@ if __name__ == '__main__':
         return str(temp_f) + "F"
     print("Your temperature converted in Fahrenheit: ", temp_conv(text))
     
+    print('\n*********** Task 7 ***********')
+    def temp_conv():
+        temperature_list = []
+        for c in range(6):
+            text = input("Enter a temperature in Celsius in the format 21C :")
+            temp_c = int(text[:-1])
+            temp_f = temp_c * 1.8 + 32
+            temperature_list.append(temp_f)
+        print(f"The HIGHEST temperature is {max(temperature_list)}F")
+        print(f"The AVERAGE temperature is {avg(temperature_list)}F")
+        print(f"The LOWEST temperature is {min(temperature_list)}F")
+        return temp_f
+        
+    temp_conv()
+    
