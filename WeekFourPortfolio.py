@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from statistics import mean as avg
+
 if __name__ == '__main__':
     print('\n*********** Task 1 ***********')
     user_input = int(input('Enter a number: '))
@@ -69,28 +71,33 @@ if __name__ == '__main__':
 
     print(f"Your temperature in C is equivalent to {temp_conv_to_f(temperature_c):.2f} F")
     print(f"Converting it back to C is {temp_conv_to_c(temp_conv_to_f(temperature_c)):.2f}.")
-
     print('\n*********** Task 6 ***********')
-    text = input("Enter a temperature in Celsius in the format 21C :")
+    user_input = input("Enter a temperature in Celsius in the format 21C :")
+
 
     def temp_conv(info):
         temp_c = int(info[:-1])
         temp_f = temp_c * 1.8 + 32
         return str(temp_f) + "F"
-    print("Your temperature converted in Fahrenheit: ", temp_conv(text))
-    
+
+
+    print("Your temperature converted in Fahrenheit: ", temp_conv(user_input))
+
     print('\n*********** Task 7 ***********')
+
+
     def temp_conv():
         temperature_list = []
         for c in range(6):
-            text = input("Enter a temperature in Celsius in the format 21C :")
-            temp_c = int(text[:-1])
+            user_input2 = input("Enter a temperature in Celsius in the format 21C :")
+            temp_c = int(user_input2[:-1])
             temp_f = temp_c * 1.8 + 32
             temperature_list.append(temp_f)
-        print(f"The HIGHEST temperature is {max(temperature_list)}F")
-        print(f"The AVERAGE temperature is {avg(temperature_list)}F")
-        print(f"The LOWEST temperature is {min(temperature_list)}F")
+        print(f"The HIGHEST temperature is {max(temperature_list):1}F")
+        print(f"The AVERAGE temperature is {avg(temperature_list):1}F")
+        print(f"The LOWEST temperature is {min(temperature_list):1}F")
         return temp_f
-        
+
+
     temp_conv()
-    
+
