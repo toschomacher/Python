@@ -1,0 +1,7 @@
+# Example code for sorting a list alphabetically using the lambda key
+
+names = ['Eric', 'Sophie', 'anna', 'sam']
+# This will first change the first letters to upper cases before comparing them
+names.sort(key=lambda n : str.upper(n))
+print(names)
+# The output is: ['anna', 'Eric', 'sam', 'Sophie']
