@@ -2,7 +2,7 @@
 import calendar
 import statistics
 if __name__ == '__main__':
-    rainfall = ['max','min']
+    rainfall = ['max_month','min_month']
     for month in (calendar.month_name[1:]):
         user_input = (input(f"Enter rainfall for {month}: "))
         user_input = int(user_input[:-2])
