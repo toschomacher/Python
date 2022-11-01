@@ -7,3 +7,5 @@ if __name__ == '__main__':
         print(f"It shall be so, {user_input}!")
     else:
         print("You may not be known by that name!")
+# version 2 )better version)
+#    if user_input startswith('Lord ') or user_input startswith('Lady '):
