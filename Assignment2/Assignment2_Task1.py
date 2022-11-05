@@ -11,7 +11,7 @@ if __name__ == "__main__":
     while 1:
         try:
             number_passwords = int(input("How many passwords are needed?: "))
-            if 0 < number_passwords < 125:
+            if 0 < number_passwords < 25:
                 break
             else:
                 print("Please enter a value between 1 and 24.")
