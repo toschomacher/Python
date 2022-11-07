@@ -21,7 +21,7 @@ if __name__ == "__main__":
             print("Best Time Here: Runner #", list1[list2.index(min(list2))], sep='')
             break
         else:
-            if data.find("::") < 1 or not data[data.find("::") + 2:].isdigit():
+            if data.find("::") < 1 or not data[:data.find("::")].isdigit() or not data[data.find("::") + 2:].isdigit():
                 print("Error in data stream. Ignoring. Carry on.")
             else:
                 list1.append(int(data[:data.find("::")]))
