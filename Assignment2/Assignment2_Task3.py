@@ -3,10 +3,8 @@
 import process
 
 if __name__ == "__main__":
-    my_file = open("students.txt", "r")
-    data = my_file.read()  # data is a type str
-    data_into_list = data.split("\n")  # data_into_list is a type list
-    my_file.close()
+    with open("students.txt", "r") as my_file:
+        data_into_list = my_file.readlines()
     my_list = process.list_process(data_into_list)  # print(my_list[0][:]) print(my_list[1][:]) print(my_list[2][:])
     final_list = []
     for n in range(0, len(my_list[0][:])):
