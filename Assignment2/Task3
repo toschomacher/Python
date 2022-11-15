@@ -6,11 +6,7 @@ from random import randint
 def list_process(expect_list):
 
     from re import sub
-    ucas_list = []
-    temp_list = []
-    first_names_list = []
-    surnames_list = []
-    names_initials = []
+    ucas_list, temp_list, first_names_list, surnames_list, names_initials = ([] for i in range(5))
     temp_string = ""
     for k in expect_list:
         ucas_list.append(k[:8])
