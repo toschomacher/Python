@@ -25,5 +25,5 @@ if __name__ == "__main__":
         new_password = LIST_WORDS[randrange(0, 8)] + LIST_WORDS[randrange(8, 16)] + LIST_WORDS[randrange(16, 24)]
         if new_password not in new_list:
             new_list.append(new_password)
-            print(f"{count + 1} --> " + new_password)
+            print(f"{count + 1:<2d} --> " + new_password)
             count += 1
