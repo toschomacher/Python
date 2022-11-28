@@ -144,6 +144,7 @@ if __name__ == "__main__":
                     'gear', 'gears', 'shaft', 'interview', 'chair', 'fish', 'particular', 'camera', 'structure',
                     'perform', 'weight', 'suddenly', 'discover', 'candidate', 'bottom', 'grater', 'smaller', }
 
+    print("There are", len(set_of_words), "English words in this dictionary.\nDecrypting in progress...")
     success = 0
     for n in range(1, 27):
         counter = 0
@@ -154,7 +155,8 @@ if __name__ == "__main__":
             if word.lower() in set_of_words:
                 counter += 1
         if (counter/total_number_words*100) > 50:
-            print(encryptedString)
+            print("Caesar encryption recognised!\n___________________________\n" + encryptedString +
+                  "\n___________________________")
             print('There is ', format(counter/total_number_words*100, '.2f'), '% match.', sep='')
             success = 1
     if success == 0:
