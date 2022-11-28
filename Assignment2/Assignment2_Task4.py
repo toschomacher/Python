@@ -4,34 +4,7 @@ import string
 import re
 
 
-def caesar(input_string: str, rotation: int = 1) -> str:
-    key = {}
-    for ch in string.ascii_letters:
-        if 96 < ord(ch) < 123:
-            key[ch] = chr((ord(ch) - ord('a') + rotation) % 26 + ord('a'))
-        if 64 < ord(ch) < 91:
-            key[ch] = chr((ord(ch) - ord('A') + rotation) % 26 + ord('A'))
-    translation_table = str.maketrans(key)
-    return input_string.translate(translation_table)
-
-
-if __name__ == "__main__":
-    myString = "Bc cbs kcizr vojs pszwsjsr wb hvs zogh msofg ct hvs bwbshssbhv qsbhifm hvoh hvwg kcfzr kog" \
-               " pswbu kohqvsr yssbzm obr qzcgszm pm wbhszzwusbqsg ufsohsf hvob aob'g obr msh og acfhoz og vwg" \
-               " ckb; hvoh og asb pigwsr hvsagszjsg opcih hvswf jofwcig qcbqsfbg hvsm ksfs gqfihwbwgsr obr ghirwsr," \
-               " dsfvodg ozacgh og boffckzm og o aob kwhv o awqfcgqcds awuvh gqfihwbwgs hvs hfobgwsbh qfsohifsg" \
-               " hvoh gkofa obr aizhwdzm wb o rfcd ct kohsf. Kwhv wbtwbwhs qcadzoqsbqm asb ksbh hc obr tfc cjsf" \
-               " hvwg uzcps opcih hvswf zwhhzs ottowfg, gsfsbs wb hvswf oggifobqs ct hvswf sadwfs cjsf aohhsf." \
-               " Wh wg dcggwpzs hvoh hvs wbtigcfwo ibrsf hvs awqfcgqcds rc hvs goas. Bc cbs uojs o hvciuvh hc" \
-               " hvs czrsf kcfzrg ct gdoqs og gcifqsg ct viaob robusf, cf hvciuvh ct hvsa cbzm hc rwgawgg hvs" \
-               " wrso ct zwts idcb hvsa og wadcggwpzs cf wadfcpopzs. Wh wg qifwcig hc fsqozz gcas ct hvs asbhoz" \
-               " vopwhg ct hvcgs rsdofhsr romg. Oh acgh hsffsghfwoz asb tobqwsr hvsfs awuvh ps chvsf asb idcb" \
-               " Aofg, dsfvodg wbtsfwcf hc hvsagszjsg obr fsorm hc kszqcas o awggwcbofm sbhsfdfwgs. Msh oqfcgg" \
-               " hvs uizt ct gdoqs, awbrg hvoh ofs hc cif awbrg og cifg ofs hc hvcgs ct hvs psoghg hvoh dsfwgv," \
-               " wbhszzsqhg jogh obr qccz obr ibgmadohvshwq, fsuofrsr hvwg sofhv kwhv sbjwcig smsg, obr gzckzm" \
-               " obr gifszm rfsk hvswf dzobg ouowbgh ig. Obr sofzm wb hvs hksbhwshv qsbhifm qoas hvs ufsoh" \
-               " rwgwzzigwcbasbh."
-
+def dictionary():
     set_of_words = {'be', 'and', 'of', 'a', 'in', 'to', 'have', 'too', 'it', 'I', 'that', 'for', 'you',
                     'he', 'with', 'on', 'do', 'say', 'this', 'they', 'at', 'but', 'we', 'his', 'from',
                     'that', 'not', "can't", "won't", 'by', 'she', 'or', 'as', 'what', 'go', 'their', 'can',
@@ -142,9 +115,40 @@ if __name__ == "__main__":
                     'direction', 'weapon', 'employee', 'employer', 'cultural', 'contain', 'peace', 'head', 'control',
                     'base', 'pain', 'apply', 'cancel', 'cancellation', 'play', 'wide', 'narrow', 'shake', 'fly',
                     'gear', 'gears', 'shaft', 'interview', 'chair', 'fish', 'particular', 'camera', 'structure',
-                    'perform', 'weight', 'suddenly', 'discover', 'candidate', 'bottom', 'grater', 'smaller', }
+                    'perform', 'weight', 'suddenly', 'discover', 'candidate', 'bottom', 'grater', 'smaller',
+                    'dinner', 'bus', 'plane', 'ship', 'sensor', 'cap', 'lock', }
+    return set_of_words
 
-    print("There are", len(set_of_words), "English words in this dictionary.\nDecrypting in progress...")
+
+def caesar(input_string: str, rotation: int = 1) -> str:
+    key = {}
+    for ch in string.ascii_letters:
+        if 96 < ord(ch) < 123:
+            key[ch] = chr((ord(ch) - ord('a') + rotation) % 26 + ord('a'))
+        if 64 < ord(ch) < 91:
+            key[ch] = chr((ord(ch) - ord('A') + rotation) % 26 + ord('A'))
+    translation_table = str.maketrans(key)
+    return input_string.translate(translation_table)
+
+
+if __name__ == "__main__":
+    myString = "Bc cbs kcizr vojs pszwsjsr wb hvs zogh msofg ct hvs bwbshssbhv qsbhifm hvoh hvwg kcfzr kog" \
+               " pswbu kohqvsr yssbzm obr qzcgszm pm wbhszzwusbqsg ufsohsf hvob aob'g obr msh og acfhoz og vwg" \
+               " ckb; hvoh og asb pigwsr hvsagszjsg opcih hvswf jofwcig qcbqsfbg hvsm ksfs gqfihwbwgsr obr ghirwsr," \
+               " dsfvodg ozacgh og boffckzm og o aob kwhv o awqfcgqcds awuvh gqfihwbwgs hvs hfobgwsbh qfsohifsg" \
+               " hvoh gkofa obr aizhwdzm wb o rfcd ct kohsf. Kwhv wbtwbwhs qcadzoqsbqm asb ksbh hc obr tfc cjsf" \
+               " hvwg uzcps opcih hvswf zwhhzs ottowfg, gsfsbs wb hvswf oggifobqs ct hvswf sadwfs cjsf aohhsf." \
+               " Wh wg dcggwpzs hvoh hvs wbtigcfwo ibrsf hvs awqfcgqcds rc hvs goas. Bc cbs uojs o hvciuvh hc" \
+               " hvs czrsf kcfzrg ct gdoqs og gcifqsg ct viaob robusf, cf hvciuvh ct hvsa cbzm hc rwgawgg hvs" \
+               " wrso ct zwts idcb hvsa og wadcggwpzs cf wadfcpopzs. Wh wg qifwcig hc fsqozz gcas ct hvs asbhoz" \
+               " vopwhg ct hvcgs rsdofhsr romg. Oh acgh hsffsghfwoz asb tobqwsr hvsfs awuvh ps chvsf asb idcb" \
+               " Aofg, dsfvodg wbtsfwcf hc hvsagszjsg obr fsorm hc kszqcas o awggwcbofm sbhsfdfwgs. Msh oqfcgg" \
+               " hvs uizt ct gdoqs, awbrg hvoh ofs hc cif awbrg og cifg ofs hc hvcgs ct hvs psoghg hvoh dsfwgv," \
+               " wbhszzsqhg jogh obr qccz obr ibgmadohvshwq, fsuofrsr hvwg sofhv kwhv sbjwcig smsg, obr gzckzm" \
+               " obr gifszm rfsk hvswf dzobg ouowbgh ig. Obr sofzm wb hvs hksbhwshv qsbhifm qoas hvs ufsoh" \
+               " rwgwzzigwcbasbh."
+
+    print("There are", len(dictionary()), "English words in this dictionary.\nDecrypting in progress...")
     success = 0
     for n in range(1, 27):
         counter = 0
@@ -152,7 +156,7 @@ if __name__ == "__main__":
         compare_list = re.sub("[^\w]", " ", encryptedString).split()
         total_number_words = len(compare_list)
         for word in compare_list:
-            if word.lower() in set_of_words:
+            if word.lower() in dictionary():
                 counter += 1
         if (counter/total_number_words*100) > 50:
             print("Caesar encryption recognised!\n___________________________\n" + encryptedString +
