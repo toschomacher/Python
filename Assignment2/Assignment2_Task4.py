@@ -6,16 +6,12 @@ import re
 
 def caesar(input_string: str, rotation: int = 1) -> str:
     key = {}
-    for ch in string.ascii_lowercase:
-        key[ch] = chr((ord(ch) - ord('a') + rotation) % 26 + ord('a'))
-    translation_table_low = str.maketrans(key)
-
-    rot = {}
-    for cap in string.ascii_uppercase:
-        rot[cap] = chr((ord(cap) - ord('A') + rotation) % 26 + ord('A'))
-    translation_table_up = str.maketrans(rot)
-
-    translation_table = translation_table_low | translation_table_up
+    for ch in string.ascii_letters:
+        if 96 < ord(ch) < 123:
+            key[ch] = chr((ord(ch) - ord('a') + rotation) % 26 + ord('a'))
+        if 64 < ord(ch) < 91:
+            key[ch] = chr((ord(ch) - ord('A') + rotation) % 26 + ord('A'))
+    translation_table = str.maketrans(key)
     return input_string.translate(translation_table)
 
 
@@ -35,6 +31,25 @@ if __name__ == "__main__":
                " wbhszzsqhg jogh obr qccz obr ibgmadohvshwq, fsuofrsr hvwg sofhv kwhv sbjwcig smsg, obr gzckzm" \
                " obr gifszm rfsk hvswf dzobg ouowbgh ig. Obr sofzm wb hvs hksbhwshv qsbhifm qoas hvs ufsoh" \
                " rwgwzzigwcbasbh."
+
+    another_string = "Thyyphnl avkhf pu Ibsnhyph pz uva aol zhtl uvdhkhfz jvtwhylk dpao ilmvyl. Ilmvyl pa dhz" \
+                     " buhjjlwahisl av spcl dpao fvby whyauly vy ohcl jopskylu ilmvyl nlaapun thyyplk. Uvd h" \
+                     " khfz bzbhssf jvbwslz spcl avnlaoly ilmvyl nlaapun thyyplk av zll pm aolpy johyhjalyz dpss" \
+                     " zbpa.Aolyl hyl huk vaoly kpmmlylujl dpao tf huk nlulyhapvuz ilmvyl. Ilmvyl aol " \
+                     "hclyhnl hnl av nla thyyplk dhz hivba20-flhy-vsk jvtwhylk dpao avkhf pz 27-flhy-vsk. " \
+                     "Mvy lehtwsl, tf tbt nva thyyplk vu 21 huk P nva thyyplk vu 29.Uvd h khf’z kpcvyjlz hyl " \
+                     "tbjo tvyl hwhya myvt aoha aol thyyphnlz hyl tbjo slzz. Aol thpu ylhzvu mvy pujylhzlk kpcvyjlz" \
+                     " pz aoha wlvwsl kvu’a hmyhpk vy zohtl av zwlhr hivba aol wyvisltz zbjo hz buzbpahisl " \
+                     "johyhjalyz vy hibzl. Myvt tf vwpupvu ylnhykpun thyyphnl hnl P dvbsk zhf aol vwaptbt " \
+                     "hnl av nla thyyplk pz iladllu 23-30-flhy-vsk. Vu aopz hnl wlvwsl hyl zapss fvbun huk" \
+                     " uva avv mvvspzo av thrl h zpssf kljpzpvu. Zvtl wlvwsl mpuk h thyyphnl zvtlaopun aoha " \
+                     "dpss ohwwlu vujl huk ilsplcl lclyfaopun dpss nla ilaaly vul khf iba kvu’a ylhspzl aoha" \
+                     " dpss nlaapun dvyzl. Aoha rpuk vm thyyphnl tbza il zavwwlk.  Vu vaoly ohuk zvtl wlvwsl " \
+                     "dhua av ayf huk nlaapun thyyplk hz thuf aptlz hz aolf mhss pu svcl buaps mpuk aol ypnoa" \
+                     " wlyzvu. Avkhf pa pz clyf yhylsf aoha adv nlulyhapvuz av zohyl vul ovbzl. Fvbun wlvwsl" \
+                     " avkhf ohcl h jovpjl huk ahsr hivba aolpy wylmlylujlz dopsl ilmvyl bzbhssf ivao nlulyhapvuz" \
+                     " spclk avnlaoly huk vskly wlvwsl thrl h ybsl lclu aoha ovd aol tvaoly huk aol mhaoly av svvr" \
+                     " hmaly aolpy nyhukjopskylu."
 
     set_of_words = {'be', 'and', 'of', 'a', 'in', 'to', 'have', 'too', 'it', 'I', 'that', 'for', 'you',
                     'he', 'with', 'on', 'do', 'say', 'this', 'they', 'at', 'but', 'we', 'his', 'from',
