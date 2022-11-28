@@ -20,7 +20,21 @@ def caesar(input_string: str, rotation: int = 1) -> str:
 
 
 if __name__ == "__main__":
-    myString = "Bc cbs kcizr vojs pszwsjsr wb hvs zogh msofg ct hvs bwbshssbhv qsbhifm hvoh hvwg kcfzr kog pswbu"
+    myString = "Bc cbs kcizr vojs pszwsjsr wb hvs zogh msofg ct hvs bwbshssbhv qsbhifm hvoh hvwg kcfzr kog" \
+               " pswbu kohqvsr yssbzm obr qzcgszm pm wbhszzwusbqsg ufsohsf hvob aob'g obr msh og acfhoz og vwg" \
+               " ckb; hvoh og asb pigwsr hvsagszjsg opcih hvswf jofwcig qcbqsfbg hvsm ksfs gqfihwbwgsr obr ghirwsr," \
+               " dsfvodg ozacgh og boffckzm og o aob kwhv o awqfcgqcds awuvh gqfihwbwgs hvs hfobgwsbh qfsohifsg" \
+               " hvoh gkofa obr aizhwdzm wb o rfcd ct kohsf. Kwhv wbtwbwhs qcadzoqsbqm asb ksbh hc obr tfc cjsf" \
+               " hvwg uzcps opcih hvswf zwhhzs ottowfg, gsfsbs wb hvswf oggifobqs ct hvswf sadwfs cjsf aohhsf." \
+               " Wh wg dcggwpzs hvoh hvs wbtigcfwo ibrsf hvs awqfcgqcds rc hvs goas. Bc cbs uojs o hvciuvh hc" \
+               " hvs czrsf kcfzrg ct gdoqs og gcifqsg ct viaob robusf, cf hvciuvh ct hvsa cbzm hc rwgawgg hvs" \
+               " wrso ct zwts idcb hvsa og wadcggwpzs cf wadfcpopzs. Wh wg qifwcig hc fsqozz gcas ct hvs asbhoz" \
+               " vopwhg ct hvcgs rsdofhsr romg. Oh acgh hsffsghfwoz asb tobqwsr hvsfs awuvh ps chvsf asb idcb" \
+               " Aofg, dsfvodg wbtsfwcf hc hvsagszjsg obr fsorm hc kszqcas o awggwcbofm sbhsfdfwgs. Msh oqfcgg" \
+               " hvs uizt ct gdoqs, awbrg hvoh ofs hc cif awbrg og cifg ofs hc hvcgs ct hvs psoghg hvoh dsfwgv," \
+               " wbhszzsqhg jogh obr qccz obr ibgmadohvshwq, fsuofrsr hvwg sofhv kwhv sbjwcig smsg, obr gzckzm" \
+               " obr gifszm rfsk hvswf dzobg ouowbgh ig. Obr sofzm wb hvs hksbhwshv qsbhifm qoas hvs ufsoh" \
+               " rwgwzzigwcbasbh."
 
     set_of_words = {'be', 'and', 'of', 'a', 'in', 'to', 'have', 'too', 'it', 'I', 'that', 'for', 'you',
                     'he', 'with', 'on', 'do', 'say', 'this', 'they', 'at', 'but', 'we', 'his', 'from',
@@ -100,11 +114,42 @@ if __name__ == "__main__":
                     'administration', 'husband', 'floor', 'campaign', 'material', 'population', 'earth', 'well',
                     'call', 'economy', 'medical', 'doctor', 'nurse', 'eleventh', 'twelfth', 'thirteenth',
                     'fourteenth', 'fifteenth', 'sixteenth ', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth',
-                    'was', 'been', 'is', 'are', '', '', '', '', '', '', '', '', '', '', '', }
+                    'was', 'been', 'is', 'are', 'fire', 'future', 'wrong', 'involve', 'defense', 'anyone',
+                    'increase', 'security', 'bank', 'myself', 'certainly', 'sport', 'board', 'seek', 'per',
+                    'subject', 'officer', 'private', 'rest', 'behaviour', 'deal', 'performance', 'fight',
+                    'throw', 'top', 'quickly', 'past', 'goal', 'bed', 'order', 'author', 'fill', 'represent',
+                    'focus', 'foreign', 'drop', 'plan', 'blood', 'upon', 'agency', 'push', 'nature', 'recently',
+                    'store', 'reduce', 'sound', 'note', 'fine', 'before', 'near', 'movement', 'page', 'enter',
+                    'share', 'common', 'poor', 'natural', 'race', 'concern', 'series', 'significant', 'similar',
+                    'hot', 'language', 'usually', 'response', 'dead', 'rise', 'factor', 'decade', 'article',
+                    'save', 'artist', 'scene', 'stock', 'career', 'despite', 'central', 'thus', 'treatment',
+                    'beyond', 'happy', 'exactly', 'protect', 'approach', 'lie', 'size', 'fund', 'serious', 'occur',
+                    'media', 'ready', 'sign', 'thought', 'list', 'individual', 'simple', 'quality', 'pressure',
+                    'accept', 'decline', 'answer', 'resource', 'identify', 'meeting', 'left', 'determine',
+                    'prepare', 'disease', 'whatever', 'success', 'argue', 'cup', 'particularly', 'amount',
+                    'ability', 'staff', 'recognize', 'indicate', 'character', 'growth', 'loss', 'degree',
+                    'wonder', 'attack', 'herself', 'region', 'television', 'box', 'tv', 'training', 'pretty',
+                    'trade', 'deal', 'election', 'everybody', 'physical', 'lay', 'general', 'feeling',
+                    'standard', 'bill', 'message', 'fail', 'outside', 'inside', 'arrive', 'analysis', 'benefit',
+                    'sex', 'forward', 'backward', 'lawyer', 'present', 'section', 'environmental', 'glass',
+                    'answer', 'skill', 'professor', 'operation', 'financial', 'crime', 'stage', 'ok', 'compare',
+                    'authority', 'miss', 'design', 'sort', 'act', 'knowledge', 'station', 'state', 'strategy',
+                    'clearly', 'discuss', 'indeed', 'force', 'truth', 'lie', 'song', 'example', 'check', 'leg',
+                    'foot', 'finger', 'toe', 'nail', 'sharp', 'fragile', 'soft', 'dark', 'various', 'rather',
+                    'laugh', 'guess', 'executive', 'prove', 'hang', 'entire', 'rock', 'design', 'enough', 'forget',
+                    'claim', 'remove', 'copy', 'paste', 'delete', 'manager', 'boss', 'supervisor', 'client',
+                    'enjoy', 'network', 'legal', 'religious', 'cold', 'warm', 'form', 'final', 'main', 'science',
+                    'memory', 'card', 'above', 'seat', 'cell', 'sea', 'ocean', 'salt', 'bit', 'establish', 'nice',
+                    'trial', 'expert', 'firm', 'radio', 'visit', 'management', 'care', 'avoid', 'imagine',
+                    'tonight', 'huge', 'ball', 'stall', 'limp', 'finish', 'yourself', 'talk', 'theory', 'impact',
+                    'respond', 'statement', 'maintain', 'charge', 'popular', 'traditional', 'onto', 'reveal',
+                    'direction', 'weapon', 'employee', 'employer', 'cultural', 'contain', 'peace', 'head', 'control',
+                    'base', 'pain', 'apply', 'cancel', 'cancellation', 'play', 'wide', 'narrow', 'shake', 'fly',
+                    'gear', 'gears', 'shaft', 'interview', 'chair', 'fish', 'particular', 'camera', 'structure',
+                    'perform', 'weight', 'suddenly', 'discover', 'candidate', 'bottom', 'grater', 'smaller', }
     # company is number 189 in the list
-    print("one" in set_of_words)
-    print(set_of_words)
-    print(type(set_of_words))
+
+    success = 0
     for n in range(1, 27):
         counter = 0
         encryptedString = caesar(myString, n)
@@ -113,6 +158,9 @@ if __name__ == "__main__":
         for word in compare_list:
             if word.lower() in set_of_words:
                 counter += 1
-        if (counter/total_number_words*100) > 60:
+        if (counter/total_number_words*100) > 50:
             print(encryptedString)
-            print(counter/total_number_words*100)
+            print(format(counter/total_number_words*100, '.2f'), '% match')
+            success = 1
+    if success == 0:
+        print('Cannot decrypt. Most likely not a Caesar Cypher at work here.')
