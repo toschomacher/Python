@@ -175,7 +175,7 @@ if __name__ == "__main__":
                 counter += 1
         if (counter/total_number_words*100) > 50:
             print(encryptedString)
-            print(format(counter/total_number_words*100, '.2f'), '% match')
+            print('There is ', format(counter/total_number_words*100, '.2f'), '% match.', sep='')
             success = 1
     if success == 0:
         print('Cannot decrypt. Most likely not a Caesar Cypher at work here.')
