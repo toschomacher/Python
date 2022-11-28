@@ -32,25 +32,6 @@ if __name__ == "__main__":
                " obr gifszm rfsk hvswf dzobg ouowbgh ig. Obr sofzm wb hvs hksbhwshv qsbhifm qoas hvs ufsoh" \
                " rwgwzzigwcbasbh."
 
-    another_string = "Thyyphnl avkhf pu Ibsnhyph pz uva aol zhtl uvdhkhfz jvtwhylk dpao ilmvyl. Ilmvyl pa dhz" \
-                     " buhjjlwahisl av spcl dpao fvby whyauly vy ohcl jopskylu ilmvyl nlaapun thyyplk. Uvd h" \
-                     " khfz bzbhssf jvbwslz spcl avnlaoly ilmvyl nlaapun thyyplk av zll pm aolpy johyhjalyz dpss" \
-                     " zbpa.Aolyl hyl huk vaoly kpmmlylujl dpao tf huk nlulyhapvuz ilmvyl. Ilmvyl aol " \
-                     "hclyhnl hnl av nla thyyplk dhz hivba20-flhy-vsk jvtwhylk dpao avkhf pz 27-flhy-vsk. " \
-                     "Mvy lehtwsl, tf tbt nva thyyplk vu 21 huk P nva thyyplk vu 29.Uvd h khf’z kpcvyjlz hyl " \
-                     "tbjo tvyl hwhya myvt aoha aol thyyphnlz hyl tbjo slzz. Aol thpu ylhzvu mvy pujylhzlk kpcvyjlz" \
-                     " pz aoha wlvwsl kvu’a hmyhpk vy zohtl av zwlhr hivba aol wyvisltz zbjo hz buzbpahisl " \
-                     "johyhjalyz vy hibzl. Myvt tf vwpupvu ylnhykpun thyyphnl hnl P dvbsk zhf aol vwaptbt " \
-                     "hnl av nla thyyplk pz iladllu 23-30-flhy-vsk. Vu aopz hnl wlvwsl hyl zapss fvbun huk" \
-                     " uva avv mvvspzo av thrl h zpssf kljpzpvu. Zvtl wlvwsl mpuk h thyyphnl zvtlaopun aoha " \
-                     "dpss ohwwlu vujl huk ilsplcl lclyfaopun dpss nla ilaaly vul khf iba kvu’a ylhspzl aoha" \
-                     " dpss nlaapun dvyzl. Aoha rpuk vm thyyphnl tbza il zavwwlk.  Vu vaoly ohuk zvtl wlvwsl " \
-                     "dhua av ayf huk nlaapun thyyplk hz thuf aptlz hz aolf mhss pu svcl buaps mpuk aol ypnoa" \
-                     " wlyzvu. Avkhf pa pz clyf yhylsf aoha adv nlulyhapvuz av zohyl vul ovbzl. Fvbun wlvwsl" \
-                     " avkhf ohcl h jovpjl huk ahsr hivba aolpy wylmlylujlz dopsl ilmvyl bzbhssf ivao nlulyhapvuz" \
-                     " spclk avnlaoly huk vskly wlvwsl thrl h ybsl lclu aoha ovd aol tvaoly huk aol mhaoly av svvr" \
-                     " hmaly aolpy nyhukjopskylu."
-
     set_of_words = {'be', 'and', 'of', 'a', 'in', 'to', 'have', 'too', 'it', 'I', 'that', 'for', 'you',
                     'he', 'with', 'on', 'do', 'say', 'this', 'they', 'at', 'but', 'we', 'his', 'from',
                     'that', 'not', "can't", "won't", 'by', 'she', 'or', 'as', 'what', 'go', 'their', 'can',
@@ -162,7 +143,6 @@ if __name__ == "__main__":
                     'base', 'pain', 'apply', 'cancel', 'cancellation', 'play', 'wide', 'narrow', 'shake', 'fly',
                     'gear', 'gears', 'shaft', 'interview', 'chair', 'fish', 'particular', 'camera', 'structure',
                     'perform', 'weight', 'suddenly', 'discover', 'candidate', 'bottom', 'grater', 'smaller', }
-    # company is number 189 in the list
 
     success = 0
     for n in range(1, 27):
