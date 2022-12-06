@@ -3,7 +3,6 @@
 def english_dictionary():
     with open('words_alpha.txt') as word_file:
         valid_words = set(word_file.read().split())
-        word_file.close()
     return valid_words
 
 
@@ -35,14 +34,12 @@ if __name__ == "__main__":
                 counter = 0
                 encryptedString = caesar(myString, n)
                 compare_list = replace("[^a-zA-Z]", " ", encryptedString).split()
-                total_number_words = len(compare_list)
                 for word in compare_list:
                     if word.lower() in english_words:
                         counter += 1
-                if (int(counter / total_number_words * 100)) > 70:
+                if (int(counter / len(compare_list) * 100)) > 70:
                     print(encryptedString)
                     success = 1
-                    # print(str(int(counter / total_number_words * 100)) + "%")
             if success == 0:
                 print('Cannot decrypt. Most likely not a Caesar Cypher at work here.')
             file.close()
