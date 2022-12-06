@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def password_generator():
+def password_generator(passwords_required):
     from random import randrange
     from constants import WORDS
     count = 0
@@ -29,5 +29,4 @@ def user_interaction():
 
 if __name__ == "__main__":
     print("Password Generator\n==================")
-    passwords_required = user_interaction()
-    password_generator()
+    password_generator(user_interaction())
