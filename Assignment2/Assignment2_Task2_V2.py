@@ -25,9 +25,9 @@ def data_output():
     print("Best Time Here: Runner #" + str(runners[times.index(minimum)]))
 
 
-def data_alignment():
-    runners.append(int(data[:data.find("::")]))
-    times.append(int(data[data.find("::") + 2:]))
+def data_alignment(r, t, d):
+    r.append(int(d[:d.find("::")]))
+    t.append(int(d[d.find("::") + 2:]))
 
 
 if __name__ == "__main__":
@@ -46,4 +46,4 @@ if __name__ == "__main__":
             if data.find("::") < 1 or not data[:data.find("::")].isdigit() or not data[data.find("::") + 2:].isdigit():
                 print("Error in data stream. Ignoring. Carry on.")
             else:
-                data_alignment()
+                data_alignment(runners, times, data)
